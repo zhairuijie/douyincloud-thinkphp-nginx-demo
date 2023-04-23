@@ -39,7 +39,7 @@ class Index extends BaseController
 
     public function ping(): Json
         {
-            return self::getResponse(0, 'success', $res);
+            return self::getResponse(0, 'success');
         }
 
     public function setName(): Json
