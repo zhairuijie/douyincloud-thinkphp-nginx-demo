@@ -37,6 +37,11 @@ class Index extends BaseController
         return self::getResponse(0, 'success', $res);
     }
 
+    public function ping(): Json
+        {
+            return self::getResponse(0, 'success', $res);
+        }
+
     public function setName(): Json
     {
         $target = $this->request->post('target');
