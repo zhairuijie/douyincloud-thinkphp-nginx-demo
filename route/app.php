@@ -13,4 +13,5 @@ use think\facade\Route;
 Route::get('/api/hello', 'index/sayHello');
 Route::post('/api/set_name', 'index/setName');
 Route::get('/api/https', 'index/https');
+Route::get('/api/http', 'index/http');
 
