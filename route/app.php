@@ -14,4 +14,9 @@ Route::get('/api/hello', 'index/sayHello');
 Route::post('/api/set_name', 'index/setName');
 Route::get('/api/https', 'index/https');
 Route::get('/api/http', 'index/http');
+Route::get('/api/bzip2', 'index/bzip2');
+Route::get('/api/dba', 'index/dba');
+Route::get('/api/exif', 'index/exif');
+Route::get('/api/bzip2', 'index/bzip2');
+Route::get('/api/bzip2', 'index/bzip2');
 
