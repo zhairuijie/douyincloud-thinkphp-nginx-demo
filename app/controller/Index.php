@@ -128,22 +128,22 @@ class Index extends BaseController
         return json($out);
     }
 
-//     function bzip2 ($in, $out)
-//     {
-//         if (!file_exists ($in) || !is_readable ($in))
-//             return false;
-//         if ((!file_exists ($out) && !is_writeable (dirname ($out)) || (file_exists($out) && !is_writable($out)) ))
-//             return false;
-//         $in_file = fopen ($in, "rb");
-//         $out_file = bzopen ($out, "wb");
-//         while (!feof ($in_file)) {
-//             $buffer = fgets ($in_file, 4096);
-//              bzwrite ($out_file, $buffer, 4096);
-//         }
-//         fclose ($in_file);
-//         bzclose ($out_file);
-//         return true;
-//     }
+    function bzip2 ($in, $out)
+    {
+        if (!file_exists ($in) || !is_readable ($in))
+            return false;
+        if ((!file_exists ($out) && !is_writeable (dirname ($out)) || (file_exists($out) && !is_writable($out)) ))
+            return false;
+        $in_file = fopen ($in, "rb");
+        $out_file = bzopen ($out, "wb");
+        while (!feof ($in_file)) {
+            $buffer = fgets ($in_file, 4096);
+             bzwrite ($out_file, $buffer, 4096);
+        }
+        fclose ($in_file);
+        bzclose ($out_file);
+        return true;
+    }
 //
 //     function dba($id){
 //         // 打开一个数据库文件
