@@ -147,8 +147,18 @@ class Index extends BaseController
 
     function dba($id){
         // 打开一个数据库文件
-        $id = dba_open("/tmp/test.db", "n", "gdbm");
+        $id = dba_open("index.php", "n", "gdbm");
         //$id = dba_popen("/tmp/test1.db", "c", "gdbm");
+
+//         // 添加或替换一个内容
+//         dba_replace("key1", "This is an example!", $id);
+//
+//         // 如果内容存在
+//         if(dba_exists("key1", $id)){
+//             // 读取内容
+//             echo dba_fetch("key1", $id), PHP_EOL;
+//             // This is an example!
+//         }
         dba_close($id);
     }
 //
